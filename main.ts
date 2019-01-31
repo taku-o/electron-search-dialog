@@ -1,6 +1,6 @@
 'use strict';
 import {app, BrowserWindow} from 'electron';
-import {localShortcut} from 'electron-localShortcut';
+const localShortcut = require('electron-localshortcut');
 
 class Dialog {
   readonly width: number;

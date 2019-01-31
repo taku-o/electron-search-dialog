@@ -67,7 +67,7 @@ var Dialog = /** @class */ (function () {
     };
     return Dialog;
 }());
-function SearchDialog(parent, locale) {
+function searchDialog(parent, locale) {
     return new Dialog(parent, locale);
 }
-exports["default"] = SearchDialog;
+exports["default"] = searchDialog;

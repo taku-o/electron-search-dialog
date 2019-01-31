@@ -75,6 +75,6 @@ class Dialog {
   }
 }
 
-export default function SearchDialog(parent: any, locale?: string) {
+export default function searchDialog(parent: any, locale?: string) {
   return new Dialog(parent, locale);
 }

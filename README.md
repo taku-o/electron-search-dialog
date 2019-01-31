@@ -16,11 +16,11 @@ npm install --save electron-search-dialog
 From main process js:
 
 ```js
-var SearchDialog = require('electron-search-dialog');
+var searchDialog = require('electron-search-dialog').default;
 
 // create instance.
 var win = ... // searching page (BrowserWindow)
-var sd = new SearchDialog(win);
+var sd = searchDialog(win);
 
 // open search dialog
 sd.openDialog();

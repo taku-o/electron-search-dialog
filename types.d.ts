@@ -6,4 +6,4 @@ declare namespace ElectronSearchDialog {
   }
 }
 
-export default function SearchDialog(parent, locale?: string): ElectronSearchDialog.Dialog;
+export default function searchDialog(parent, locale?: string): ElectronSearchDialog.Dialog;

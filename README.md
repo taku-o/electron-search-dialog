@@ -13,7 +13,7 @@ npm install --save electron-search-dialog
 
 ## Usage
 
-From renderer process js:
+From main process js:
 
 ```js
 var SearchDialog = require('electron-search-dialog');

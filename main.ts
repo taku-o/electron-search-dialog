@@ -39,7 +39,7 @@ export default class Dialog {
       maximizable: false,
       fullscreenable: false,
     });
-    this.win.loadFile('./dialog.html');
+    this.win.loadFile('./renderer.html');
 
     // shortcut
     localShortcut.register(this.win, 'Command+Q', () => {

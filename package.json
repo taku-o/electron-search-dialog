@@ -1,0 +1,36 @@
+{
+  "name": "electron-search-dialog",
+  "version": "0.1.0",
+  "description": "Electron dialog for searching page contents.",
+  "main": "dialog.js",
+  "types": "types.d.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "lint": "eslint *.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:taku-o/electron-search-dialog.git"
+  },
+  "keywords": [
+    "electron",
+    "dialog",
+    "search",
+    "findInPage"
+  ],
+  "homepage": "https://github.com/taku-o/electron-search-dialog",
+  "bugs": {
+    "url": "https://github.com/taku-o/electron-search-dialog/issues",
+    "email": "mail@nanasi.jp"
+  },
+  "author": "taku-o <mail@nanasi.jp> (http://nanasi.jp/)",
+  "license": "MIT",
+  "dependencies": {
+    "electron-localshortcut": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.11.7",
+    "electron": "^3.1.1"
+  }
+}

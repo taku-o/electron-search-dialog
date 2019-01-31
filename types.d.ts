@@ -1,11 +1,9 @@
 declare namespace ElectronSearchDialog {
   class Dialog {
-    constructor(win: Electron.BrowserWindow, locale?: string);
+    constructor(parent, locale?: string);
     openDialog():  void;
     closeDialog(): void;
   }
 }
 
-declare module 'electron-search-dialog' {
-  export = Dialog;
-}
+export default function SearchDialog(parent, locale?: string): ElectronSearchDialog.Dialog;

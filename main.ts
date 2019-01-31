@@ -1,18 +1,26 @@
 'use strict';
-const app = require('electron').remote.app;
-const localShortcut = require('electron-localshortcut');
+import {app, BrowserWindow} from 'electron';
+import {localShortcut} from 'electron-localShortcut';
 
-export default class Dialog {
+class Dialog {
   readonly width: number;
   readonly height: number;
 
-  readonly parent: Electron.BrowserWindow;
+  readonly parent: any;
   readonly locale: string;
-  win: Electron.BrowserWindow;
+  win: any;
 
-  constructor(parent: Electron.BrowserWindow, locale?: string) {
+  constructor(parent: any, locale?: string) {
     this.parent = parent;
-    this.locale = locale? locale: app.getLocale();
+    const lc = locale? locale: app.getLocale();
+    switch (lc) {
+      case 'ja':
+      case 'en':
+        this.locale = lc;
+        break;
+      default:
+        this.locale = 'en';
+    }
   }
 
   openDialog(): void {
@@ -39,7 +47,7 @@ export default class Dialog {
       maximizable: false,
       fullscreenable: false,
     });
-    this.win.loadFile('./renderer.html');
+    this.win.loadFile(`./template/dialog-${this.locale}.html`);
 
     // shortcut
     localShortcut.register(this.win, 'Command+Q', () => {
@@ -57,7 +65,7 @@ export default class Dialog {
       event.preventDefault();
       this.win.hide();
     });
-    this.helpSearchDialog.on('closed', () => {
+    this.win.on('closed', () => {
       this.win = null;
     });
   }
@@ -65,4 +73,8 @@ export default class Dialog {
   closeDialog(): void {
     this.win.hide();
   }
+}
+
+export default function SearchDialog(parent: any, locale?: string) {
+  return new Dialog(parent, locale);
 }

@@ -11,7 +11,7 @@
     "listFiles": false,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true, // temporary
+    "noImplicitAny": false, // temporary
     "noImplicitReturns": true,
     "noImplicitThis": false,
     "noUnusedLocals": false,

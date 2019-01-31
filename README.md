@@ -1,9 +1,9 @@
-electron-search-dialog -- Electron dialog for searching page contents.
+electron-search-dialog -- simple Electron dialog for searching page contents.
 ===========================================
 
 ## Description
 
-Electron dialog for searching page contents.
+simple Electron dialog for searching page contents.
 
 ## Install
 
@@ -19,7 +19,7 @@ From main process js:
 var SearchDialog = require('electron-search-dialog');
 
 // create instance.
-var win = require('electron').remote.getCurrentWindow();
+var win = ... // searching page (BrowserWindow)
 var sd = new SearchDialog(win);
 
 // open search dialog

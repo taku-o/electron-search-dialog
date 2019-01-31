@@ -1,7 +1,7 @@
 {
   "name": "electron-search-dialog",
   "version": "0.1.0",
-  "description": "Electron dialog for searching page contents.",
+  "description": "simple Electron dialog for searching page contents.",
   "main": "main.js",
   "types": "types.d.ts",
   "scripts": {

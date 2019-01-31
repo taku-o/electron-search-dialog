@@ -39,7 +39,7 @@ var Dialog = /** @class */ (function () {
             maximizable: false,
             fullscreenable: false
         });
-        this.win.loadFile("./template/dialog-" + this.locale + ".html");
+        this.win.loadFile(__dirname + "/template/dialog-" + this.locale + ".html");
         // shortcut
         localShortcut.register(this.win, 'Command+Q', function () {
             electron_1.app.quit();

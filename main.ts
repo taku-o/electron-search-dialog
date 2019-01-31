@@ -47,7 +47,7 @@ class Dialog {
       maximizable: false,
       fullscreenable: false,
     });
-    this.win.loadFile(`./template/dialog-${this.locale}.html`);
+    this.win.loadFile(`${__dirname}/template/dialog-${this.locale}.html`);
 
     // shortcut
     localShortcut.register(this.win, 'Command+Q', () => {

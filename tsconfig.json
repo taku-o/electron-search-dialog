@@ -21,7 +21,7 @@
     "skipDefaultLibCheck": false,
     "skipLibCheck": false,
     "sourceMap": false,
-    "strictNullChecks": true, // temporary
+    "strictNullChecks": false, // temporary
     "traceResolution": false,
     "lib": [
       "dom",
@@ -30,6 +30,7 @@
   },
   "include": [
     "*.ts",
+    "js/*.ts",
   ],
   "exclude": [
     "node_modules",

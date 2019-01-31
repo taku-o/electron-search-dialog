@@ -18,6 +18,9 @@ btnSearch.addEventListener('click', search);
 // clear
 const clear = document.getElementById('clear');
 clear.addEventListener('click', () => {
+  const input: any = document.getElementById('search-text');
+  input.value = '';
+
   const win = require('electron').remote.getCurrentWindow();
   win.getParentWindow().webContents.stopFindInPage('clearSelection');
   return false;

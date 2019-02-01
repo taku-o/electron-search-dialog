@@ -7,6 +7,8 @@ Electron simple search dialog for page contents.
 Electron BrowserWindow based mini dialog,
 and findInPage based searching logic.
 
+<img src="https://raw.githubusercontent.com/taku-o/electron-search-dialog-sample/master/ss-mini.png" width="400">
+
 ## Install
 
 ```bash

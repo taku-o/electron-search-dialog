@@ -1,4 +1,8 @@
 "use strict";
+// focus text field at focus
+window.onfocus = function () {
+    document.getElementById('search-text').focus();
+};
 // search
 function search() {
     var input = document.getElementById('search-text');

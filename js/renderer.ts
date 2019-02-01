@@ -1,4 +1,9 @@
 
+// focus text field at focus
+window.onfocus = function () {
+  document.getElementById('search-text').focus();
+};
+
 // search
 function search() {
   const input: any = document.getElementById('search-text');

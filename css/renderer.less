@@ -1,28 +1,20 @@
 @charset "UTF-8";
 button,
 input {
-  color: inherit;
   font: inherit;
   margin: 0;
 }
 
 * {
   cursor: default;
-  -webkit-user-select: none;
-}
-
-input {
-  -webkit-user-select: text;
 }
 
 form,
 input {
-  -webkit-user-select: text;
   -webkit-app-region: no-drag;
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -63,15 +55,17 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 3px 8px;
+  height: 22px;
+  width: 120px;
+  margin-top: 5px;
   margin-bottom: 0;
-  font-size: 12px;
+  padding: 0px;
+  font-size: 14px;
   line-height: 1.4;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   cursor: default;
-  background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
@@ -89,8 +83,6 @@ body {
   border-bottom-color: #a19fa1;
   border-left-color: #c2c0c2;
   background-color: #fcfcfc;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #f1f1f1));
-  background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
   background-image: linear-gradient(to bottom, #fcfcfc 0%, #f1f1f1 100%);
 }
 .btn-default:active {
@@ -107,24 +99,21 @@ body {
   border-color: #388df8;
   border-bottom-color: #0866dc;
   background-color: #6eb4f7;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6eb4f7), color-stop(100%, #1a82fb));
-  background-image: -webkit-linear-gradient(top, #6eb4f7 0%, #1a82fb 100%);
   background-image: linear-gradient(to bottom, #6eb4f7 0%, #1a82fb 100%);
 }
 .btn-primary:active {
   background-color: #3e9bf4;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e9bf4), color-stop(100%, #0469de));
-  background-image: -webkit-linear-gradient(top, #3e9bf4 0%, #0469de 100%);
   background-image: linear-gradient(to bottom, #3e9bf4 0%, #0469de 100%);
 }
 
 label {
   display: inline-block;
   font-size: 13px;
-  margin-bottom: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .form-control {
@@ -157,7 +146,6 @@ label {
   position: relative;
   overflow-y: auto;
   flex: none;
-  border-left: none;
 }
 .pane:first-child {
   border-left: 0;
@@ -168,20 +156,8 @@ label {
   margin-left: 5px;
   margin-right: 5px;
 }
-.pane-left label {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-
 .pane-right {
   margin-left: 5px;
   margin-right: 5px;
-}
-.pane-right .btn {
-  font-size: 14px;
-  height: 22px;
-  width: 120px;
-  margin-top: 5px;
-  padding: 0px;
 }
 

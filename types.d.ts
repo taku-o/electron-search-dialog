@@ -1,6 +1,5 @@
 declare namespace ElectronSearchDialog {
-  class Dialog {
-    constructor(parent, locale?: string);
+  interface IDialog {
     openDialog():  void;
     closeDialog(): void;
   }

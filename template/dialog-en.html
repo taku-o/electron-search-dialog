@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>検索</title>
+  <title>Search Dialog</title>
   <link rel="stylesheet" href="css/search.css">
   <script type="text/javascript">
     document.ondragover = document.ondrop = function(e) {
@@ -17,20 +17,20 @@
 
     <div class="pane pane-left">
       <form onsubmit="return search();">
-        <label>検索する文字列：</label>
+        <label>Search Word：</label>
         <input id="search-text" class="form-control" type="text" autofocus>
       </form>
     </div> <!-- pane-left -->
 
     <div class="pane-mini pane-right">
       <button class="btn btn-primary" id="search">
-        ページ内検索
+        Search
       </button>
       <button class="btn btn-default" id="clear">
-        クリア
+        Clear
       </button>
       <button class="btn btn-default" id="close">
-        閉じる
+        Close
       </button>
     </div> <!-- pane-right -->
 

@@ -43,10 +43,10 @@ var Dialog = /** @class */ (function () {
         });
         this.win.loadFile(__dirname + "/template/dialog-" + this.locale + ".html");
         // shortcut
-        localShortcut.register(this.win, 'Command+Q', function () {
+        localShortcut.register(this.win, 'CommandOrControl+Q', function () {
             electron_1.app.quit();
         });
-        localShortcut.register(this.win, 'Command+W', function () {
+        localShortcut.register(this.win, 'CommandOrControl+W', function () {
             if (_this.win) {
                 _this.win.hide();
             }

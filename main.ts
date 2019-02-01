@@ -50,10 +50,10 @@ export default class Dialog implements ElectronSearchDialog.IDialog {
     this.win.loadFile(`${__dirname}/template/dialog-${this.locale}.html`);
 
     // shortcut
-    localShortcut.register(this.win, 'Command+Q', () => {
+    localShortcut.register(this.win, 'CommandOrControl+Q', () => {
       app.quit();
     });
-    localShortcut.register(this.win, 'Command+W', () => {
+    localShortcut.register(this.win, 'CommandOrControl+W', () => {
       if (this.win) { this.win.hide(); }
     });
 

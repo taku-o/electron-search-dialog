@@ -26,8 +26,8 @@ var Dialog = /** @class */ (function () {
         }
         // display center
         var bounds = this.parent.getBounds();
-        var x = bounds.x + bounds.width / 2;
-        var y = bounds.y + bounds.height / 2;
+        var x = bounds.x + bounds.width / 2 - this.width / 2;
+        var y = bounds.y + bounds.height / 2 - this.height / 2;
         this.win = new electron_1.BrowserWindow({
             parent: this.parent,
             modal: false,

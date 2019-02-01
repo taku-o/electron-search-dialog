@@ -31,8 +31,8 @@ export default class Dialog implements ElectronSearchDialog.IDialog {
 
     // display center
     const bounds = this.parent.getBounds();
-    const x = bounds.x + bounds.width / 2;
-    const y = bounds.y + bounds.height / 2;
+    const x = bounds.x + bounds.width / 2 - this.width / 2;
+    const y = bounds.y + bounds.height / 2 - this.height / 2;
 
     this.win = new BrowserWindow({
       parent: this.parent,

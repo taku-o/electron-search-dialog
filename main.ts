@@ -2,9 +2,9 @@
 import {app, BrowserWindow} from 'electron';
 const localShortcut = require('electron-localshortcut');
 
-class Dialog {
-  readonly width: number;
-  readonly height: number;
+export default class Dialog {
+  readonly width: number  = 430;
+  readonly height: number = 120;
 
   readonly parent: any;
   readonly locale: string;
@@ -75,6 +75,6 @@ class Dialog {
   }
 }
 
-export default function searchDialog(parent: any, locale?: string) {
-  return new Dialog(parent, locale);
-}
+//export default function searchDialog(parent: any, locale?: string) {
+//  return new Dialog(parent, locale);
+//}

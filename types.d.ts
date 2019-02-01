@@ -5,5 +5,3 @@ declare namespace ElectronSearchDialog {
     closeDialog(): void;
   }
 }
-
-export default function searchDialog(parent, locale?: string): ElectronSearchDialog.Dialog;

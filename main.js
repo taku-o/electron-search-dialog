@@ -4,6 +4,8 @@ var electron_1 = require("electron");
 var localShortcut = require('electron-localshortcut');
 var Dialog = /** @class */ (function () {
     function Dialog(parent, locale) {
+        this.width = 430;
+        this.height = 120;
         this.parent = parent;
         var lc = locale ? locale : electron_1.app.getLocale();
         switch (lc) {
@@ -67,7 +69,4 @@ var Dialog = /** @class */ (function () {
     };
     return Dialog;
 }());
-function searchDialog(parent, locale) {
-    return new Dialog(parent, locale);
-}
-exports["default"] = searchDialog;
+exports["default"] = Dialog;

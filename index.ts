@@ -1,6 +1,7 @@
 'use strict';
-import {app, BrowserWindow} from 'electron';
-const localShortcut = require('electron-localshortcut');
+import {remote} from 'electron';
+const app = remote.app;
+const BrowserWindow = remote.BrowserWindow;
 
 export default class Dialog implements ElectronSearchDialog.IDialog {
   readonly width: number  = 430;
@@ -48,14 +49,6 @@ export default class Dialog implements ElectronSearchDialog.IDialog {
       fullscreenable: false,
     });
     this.win.loadFile(`${__dirname}/template/dialog-${this.locale}.html`);
-
-    // shortcut
-    localShortcut.register(this.win, 'CommandOrControl+Q', () => {
-      app.quit();
-    });
-    localShortcut.register(this.win, 'CommandOrControl+W', () => {
-      if (this.win) { this.win.hide(); }
-    });
 
     // event
     this.win.webContents.on('did-finish-load', () => {

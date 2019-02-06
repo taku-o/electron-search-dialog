@@ -1,13 +1,14 @@
 'use strict';
 exports.__esModule = true;
 var electron_1 = require("electron");
-var localShortcut = require('electron-localshortcut');
+var app = electron_1.remote.app;
+var BrowserWindow = electron_1.remote.BrowserWindow;
 var Dialog = /** @class */ (function () {
     function Dialog(parent, locale) {
         this.width = 430;
         this.height = 120;
         this.parent = parent;
-        var lc = locale ? locale : electron_1.app.getLocale();
+        var lc = locale ? locale : app.getLocale();
         switch (lc) {
             case 'ja':
             case 'en':
@@ -28,7 +29,7 @@ var Dialog = /** @class */ (function () {
         var bounds = this.parent.getBounds();
         var x = bounds.x + bounds.width / 2 - this.width / 2;
         var y = bounds.y + bounds.height / 2 - this.height / 2;
-        this.win = new electron_1.BrowserWindow({
+        this.win = new BrowserWindow({
             parent: this.parent,
             modal: false,
             width: this.width,
@@ -42,15 +43,6 @@ var Dialog = /** @class */ (function () {
             fullscreenable: false
         });
         this.win.loadFile(__dirname + "/template/dialog-" + this.locale + ".html");
-        // shortcut
-        localShortcut.register(this.win, 'CommandOrControl+Q', function () {
-            electron_1.app.quit();
-        });
-        localShortcut.register(this.win, 'CommandOrControl+W', function () {
-            if (_this.win) {
-                _this.win.hide();
-            }
-        });
         // event
         this.win.webContents.on('did-finish-load', function () {
             _this.win.show();

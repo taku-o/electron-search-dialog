@@ -13,7 +13,7 @@ gulp.task('tsc', () => {
 
 // lint
 gulp.task('lint', () => {
-  return gulp.src(['*.ts','js/*.ts','*.js','js/*.js'])
+  return gulp.src(['*.ts','js/*.ts'])
     .pipe(eslint({useEslintrc: true, quiet: true}))
     .pipe(eslint.format());
 });

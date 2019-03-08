@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Search Dialog</title>
-  <link rel="stylesheet" href="../css/renderer.css">
-  <script type="text/javascript">
-    document.ondragover = document.ondrop = function(e) {
-      e.preventDefault(); return false;
-    };
-  </script>
-</head>
-<body>
-<div class="window">
-<div class="window-content">
-  <div class="pane-group">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Search Dialog</title>
+    <link rel="stylesheet" href="../css/renderer.css" />
+    <script type="text/javascript" src="../js/renderer.js"></script>
+    <script type="text/javascript">
+      document.ondragover = document.ondrop = function(e) {
+        e.preventDefault();
+        return false;
+      };
+    </script>
+  </head>
+  <body>
+    <div class="window">
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane pane-left">
+            <form id="search-form">
+              <label>Search Word：</label>
+              <input id="search-text" class="form-control" type="text" autofocus />
+            </form>
+          </div>
+          <!-- pane-left -->
 
-    <div class="pane pane-left">
-      <form onsubmit="return search();">
-        <label>Search Word：</label>
-        <input id="search-text" class="form-control" type="text" autofocus>
-      </form>
-    </div> <!-- pane-left -->
-
-    <div class="pane-mini pane-right">
-      <button class="btn btn-primary" id="search">
-        Search
-      </button>
-      <button class="btn btn-default" id="clear">
-        Clear
-      </button>
-      <button class="btn btn-default" id="close">
-        Close
-      </button>
-    </div> <!-- pane-right -->
-
-  </div> <!-- pane-group -->
-</div> <!-- window-content -->
-
-<script src="../js/renderer.js"></script>
-</body>
+          <div class="pane-mini pane-right">
+            <button class="btn btn-primary" id="search">
+              Search
+            </button>
+            <button class="btn btn-default" id="clear">
+              Clear
+            </button>
+            <button class="btn btn-default" id="close">
+              Close
+            </button>
+          </div>
+          <!-- pane-right -->
+        </div>
+        <!-- pane-group -->
+      </div>
+      <!-- window-content -->
+    </div>
+    <!-- window -->
+  </body>
 </html>

@@ -4,7 +4,7 @@ const app = remote.app;
 const BrowserWindow = remote.BrowserWindow;
 
 export default class Dialog implements ElectronSearchDialog.IDialog {
-  readonly width: number  = 430;
+  readonly width: number = 430;
   readonly height: number = 120;
 
   readonly parent: any;
@@ -13,7 +13,7 @@ export default class Dialog implements ElectronSearchDialog.IDialog {
 
   constructor(parent: any, locale?: string) {
     this.parent = parent;
-    const lc = locale? locale: app.getLocale();
+    const lc = locale ? locale : app.getLocale();
     switch (lc) {
       case 'ja':
       case 'en':
@@ -26,7 +26,8 @@ export default class Dialog implements ElectronSearchDialog.IDialog {
 
   openDialog(): void {
     if (this.win && !this.win.isDestroyed()) {
-      this.win.show(); this.win.focus();
+      this.win.show();
+      this.win.focus();
       return;
     }
 
@@ -52,7 +53,8 @@ export default class Dialog implements ElectronSearchDialog.IDialog {
 
     // event
     this.win.webContents.on('did-finish-load', () => {
-      this.win.show(); this.win.focus();
+      this.win.show();
+      this.win.focus();
     });
     this.win.on('close', (event) => {
       event.preventDefault();

@@ -1,6 +1,6 @@
 declare namespace ElectronSearchDialog {
   interface IDialog {
-    openDialog():  void;
+    openDialog(): void;
     closeDialog(): void;
   }
 }
